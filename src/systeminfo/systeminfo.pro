@@ -58,6 +58,11 @@ win32: !simulator: {
 
 }
 
+android:!android-nosdk:!simulator
+{
+    include(android/android.pri)
+}
+
 linux-*: !simulator: {
     PRIVATE_HEADERS += linux/qdeviceinfo_linux_p.h \
                        linux/qstorageinfo_linux_p.h \
